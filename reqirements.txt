@@ -1,0 +1,5 @@
+import streamlist as st
+import ollama
+
+st.write("AI CHatbot")
+
