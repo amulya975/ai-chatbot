@@ -1,22 +1,11 @@
 import streamlit as st
-import ollama
-st.title("Welcome to AI Chatbot")
-st.caption("hii")
-prompt=st.text_input("Ask me anything")
+st.title("My AI Chat Bot  ")
+st.write("welcome Enter your question below.")
+prompt=st.text_input("Enter your prompt:")
 if st.button("Generate"):
-    if  prompt:
-       st.success("Generate response...")
-       st.error
+    if prompt:
+        st.success("prompt generates successfully!")
+        st.write("### Your prompt:")
+        st.write(prompt)
     else:
-        st.warning("Please enter a question.")
-    response=ollama.chat(
-        model="llama3.2",
-        messages=[
-            {
-                "role": "user",
-                "content":prompt
-            }
-        ]
-    )
-    st.write(response["message"]["content"])
-    
+        st.warning("Please enter a prompt")
